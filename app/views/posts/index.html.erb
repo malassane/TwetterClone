@@ -1,0 +1,18 @@
+<p><%= notice %></p>
+<table>
+<tr>
+<td><%= link_to ' AJOUTEZ UN TWEET ', new_post_path %></td>
+</tr>
+</table>
+<table >
+    <% @post.each do |t| %>
+        <tr>
+            <td><%= t.contenu %></td>
+            <td><%= link_to 'Delete the tweet', post_path(t.id), method: :delete,  data: { confirm: 'Voulez vous vraiment supprimer ce tweet?' } %></td>
+            <td></td>
+            <td><%= link_to "Edit the tweet", edit_post_path(t.id) %></td>
+        </tr>
+        <br>
+    <% end %>
+</table>
+

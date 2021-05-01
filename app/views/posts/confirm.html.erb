@@ -1,0 +1,7 @@
+<h3>CONFIRMEZ VOTRE SAISIE !!!</h3>
+<%= form_with(model: @post, local: true) do |form| %>
+  <%= form.hidden_field :contenu %>
+  <p>Contenu saisi :<%= @post.contenu %></p>
+  <%= form.submit  "VALIDER" %>
+  <%= form.submit "ANNULER" %>
+<% end %>
