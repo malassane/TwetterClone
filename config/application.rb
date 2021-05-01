@@ -18,5 +18,5 @@ module TwitterClone
   end
 
 end
-config.time_zone = 'Porto Novo'
+config.time_zone = 'Paris'
 config.active_record.default_timezone = :local
